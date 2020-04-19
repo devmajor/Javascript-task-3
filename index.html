@@ -21,7 +21,14 @@
                     }
                     
                     myArray.forEach(arr => {
-                        if(arr % 2 == 0){
+                      
+                        if ( (arr % 2 == 0) && (arr % 3 == 0) && (arr % 5 == 0) ){
+                            arr = "yu-gi-oh";
+                            newArr.push(arr);
+                        } else if ( (arr % 2 == 0) && (arr % 3 == 0)  ){
+                            arr = "yu-gi";
+                            newArr.push(arr);
+                        } else if(arr % 2 == 0){
                             arr = "yu";
                             newArr.push(arr);
                         } else if(arr % 3 == 0){
@@ -29,12 +36,6 @@
                             newArr.push(arr);
                         } else if (arr % 5 == 0){
                             arr = "oh";
-                            newArr.push(arr);
-                        } else if (arr % 2 == 0 && arr % 3 == 0  ){
-                            arr = "yu-gi";
-                            newArr.push(arr);
-                        } else if (arr % 2 == 0 && arr % 3 == 0 && arr % 5 == 0 ){
-                            arr = "yu-gi-oh";
                             newArr.push(arr);
                         } else {
                             newArr.push(arr);
