@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Javascript Task 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <script>
+            function divisorReplacer (value) 
+            {
+                
+                if((value % 2 == 0 ) || (value % 3 == 0) || (value % 5 == 0)){
+                    myArray = [];
+                    let newArr = [];
+                    let i;
+                    
+                    for(i=1; i <= value; i++){
+                        myArray.push(i);
+                    }
+                    
+                    myArray.forEach(arr => {
+                        if(arr % 2 == 0){
+                            arr = "yu";
+                            newArr.push(arr);
+                        } else if(arr % 3 == 0){
+                            arr = "gi";
+                            newArr.push(arr);
+                        } else if (arr % 5 == 0){
+                            arr = "oh";
+                            newArr.push(arr);
+                        } else if ((arr % 2 !== 0) || (arr % 3 !== 0)  ){
+                            arr = "yu-gi";
+                            newArr.push(arr);
+                        } else if ((arr % 2 == 0) && (arr % 3 == 0) && (arr % 5 == 0) ){
+                            arr = "yu-gi-oh";
+                            newArr.push(arr);
+                        } else if ((arr % 2 !== 0) || (arr % 3 !== 0) || (arr % 5 !==0) ){
+                            //arr = "yu-gi-oh";
+                            newArr.push(arr);
+                        }  
+                    });
+                    
+                    console.log(newArr);
+                }
+            }
+            
+             divisorReplacer(30);
+             
+             
+        </script>
+        
+    </body>
+</html>
