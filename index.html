@@ -12,7 +12,7 @@
             {
                 
                 if((value % 2 == 0 ) || (value % 3 == 0) || (value % 5 == 0)){
-                    myArray = [];
+                    let myArray = [];
                     let newArr = [];
                     let i;
                     
@@ -30,22 +30,21 @@
                         } else if (arr % 5 == 0){
                             arr = "oh";
                             newArr.push(arr);
-                        } else if ((arr % 2 !== 0) || (arr % 3 !== 0)  ){
+                        } else if (arr % 2 == 0 && arr % 3 == 0  ){
                             arr = "yu-gi";
                             newArr.push(arr);
-                        } else if ((arr % 2 == 0) && (arr % 3 == 0) && (arr % 5 == 0) ){
+                        } else if (arr % 2 == 0 && arr % 3 == 0 && arr % 5 == 0 ){
                             arr = "yu-gi-oh";
                             newArr.push(arr);
-                        } else if ((arr % 2 !== 0) || (arr % 3 !== 0) || (arr % 5 !==0) ){
-                            //arr = "yu-gi-oh";
+                        } else {
                             newArr.push(arr);
-                        }  
+                        }
                     });
                     
                     console.log(newArr);
                 }
             }
-            
+            11 
              divisorReplacer(30);
              
              
